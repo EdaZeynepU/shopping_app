@@ -1,0 +1,52 @@
+{
+  "questions":[
+    {
+      "question": "How do you usually spend your weekends?",
+      "ans1": "Baking cookies and sharing them with friends.",
+      "ans2": "Relaxing at home, watching movies or reading.",
+      "ans3": "Attending art galleries or cultural events.",
+      "ans4": "Partying at the hottest clubs in town.",
+      "ans5": "Engaging in outdoor sports or physical activities."
+    },
+    {
+      "question": "What's your ideal vacation destination?\n\n",
+      "ans1": "A cozy cabin in the mountains.",
+      "ans2": "A laid-back beach resort.",
+      "ans3": "Exploring historical cities with architectural beauty.",
+      "ans4": "A bustling city with a vibrant nightlife.",
+      "ans5": "An adventurous outdoor destination with hiking and sports."
+    },
+    {
+      "question": "What's your preferred fashion style?",
+      "ans1": "Pastel colors and flowy dresses.",
+      "ans2": "Casual and comfortable, like jeans and a t-shirt.",
+      "ans3": "Classic and timeless pieces.",
+      "ans4": "Edgy and trendy streetwear.",
+      "ans5": "Sporty attire with sneakers and activewear."
+    },
+    {
+      "question": "How do you handle stress?",
+      "ans1": "Seek comfort in the company of loved ones.",
+      "ans2": "Take a break and relax with some music or a good book.",
+      "ans3": "Reflect and find solutions calmly.",
+      "ans4": "Blow off steam by going out and having a good time.",
+      "ans5": "Hit the gym or go for a run to release tension."
+    },
+    {
+      "question": "How do you approach challenges in life?",
+      "ans1": "With kindness and a positive attitude.",
+      "ans2": "Take things one step at a time and stay calm.",
+      "ans3": "Strategize and plan for success.",
+      "ans4": "Embrace challenges as opportunities for growth.",
+      "ans5": "Face them head-on with determination and resilience.,"
+    },
+    {
+      "question": "What's your go-to social activity?",
+      "ans1": "Hosting dinner parties or potlucks.",
+      "ans2": "Netflix and chill with friends.",
+      "ans3": "Attend sophisticated events or soirées.",
+      "ans4": "Hitting the hottest clubs and parties.",
+      "ans5": "Participating in group sports or fitness classes.,"
+    }
+  ]
+}
