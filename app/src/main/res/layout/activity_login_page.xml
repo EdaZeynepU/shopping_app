@@ -3,31 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
     tools:context=".LoginPage">
+
+    <ImageView
+        android:id="@+id/iLogo"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:src="@mipmap/ic_logo_foreground" />
 
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:hint="Username"
+        android:layout_below="@+id/iLogo"
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextEmail"
-        android:layout_marginTop="16dp"
+        android:layout_below="@+id/editTextEmail"
+        android:layout_marginTop="8dp"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"/>
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextPassword"
-        android:layout_marginTop="24dp"
-        android:text="Login" />
-
+        android:layout_below="@+id/editTextPassword"
+        android:layout_marginTop="16dp"
+        android:text="Login"/>
 </RelativeLayout>
