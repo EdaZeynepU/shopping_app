@@ -1,4 +1,4 @@
-package com.example.shopping_app.ui.dashboard;
+package com.example.shopping_app.ui.shopping_cart;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.shopping_app.databinding.FragmentDashboardBinding;
+import com.example.shopping_app.databinding.FragmentShoppingCartBinding;
 
-public class DashboardFragment extends Fragment {
+public class ShoppingCartFragment extends Fragment {
 
-    private FragmentDashboardBinding binding;
+    private FragmentShoppingCartBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        DashboardViewModel dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
+        ShoppingCartViewModel shoppingCartViewModel =
+                new ViewModelProvider(this).get(ShoppingCartViewModel.class);
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
+        binding = FragmentShoppingCartBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textShoppingCart;
+        shoppingCartViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

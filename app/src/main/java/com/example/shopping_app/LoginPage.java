@@ -49,12 +49,10 @@ public class LoginPage extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task task) {
                         if (task.isSuccessful()) {
-                            // Login successful, navigate to the next screen or perform desired action
                             Toast.makeText(LoginPage.this, "Login Successful", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(LoginPage.this, MainActivity.class));
                             finish();
                         } else {
-                            // If login fails, display a message to the user.
                             Toast.makeText(LoginPage.this, "Authentication Failed.", Toast.LENGTH_SHORT).show();
                         }
                     }

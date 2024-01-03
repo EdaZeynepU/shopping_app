@@ -8,20 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.shopping_app.R;
-
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.shopping_app.databinding.FragmentProfileBinding;
-import com.example.shopping_app.ui.profile.ProfileViewModel;
 
 public class ProfileFragment extends Fragment {
 
@@ -29,14 +21,18 @@ public class ProfileFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        ProfileViewModel notificationsViewModel =
+        ProfileViewModel ProfileViewModel =
                 new ViewModelProvider(this).get(ProfileViewModel.class);
+
+
+        TextView profileTextView = new TextView(requireContext());
+        profileTextView.setText("Profile");
+        profileTextView.setTextSize(20);
 
         binding = FragmentProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textProfile;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        ProfileViewModel.getText().observe(getViewLifecycleOwner(), profileTextView::setText);
         return root;
     }
 
