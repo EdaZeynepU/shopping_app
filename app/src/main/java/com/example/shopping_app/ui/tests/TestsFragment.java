@@ -1,27 +1,34 @@
 package com.example.shopping_app.ui.tests;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.shopping_app.QuestionItem;
 import com.example.shopping_app.R;
 import com.example.shopping_app.databinding.FragmentTestsBinding;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class TestsFragment extends Fragment {
 
     private FragmentTestsBinding binding;
-    TextView question, ans1, ans2, ans3, ans4,ans5;
-    List<QuestionItem> questionItemList;
+    ListView mListView;
+    CustomAdapter adapter;
+    private Button endButton;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -31,23 +38,28 @@ public class TestsFragment extends Fragment {
         binding = FragmentTestsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-//        final TextView textView = binding.textTests;
-//        testsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
-        question = root.findViewById(R.id.question1);
-        ans1 = root.findViewById(R.id.radioButton1);
-        ans2 = root.findViewById(R.id.radioButton2);
-        ans3 = root.findViewById(R.id.radioButton3);
-        ans4 = root.findViewById(R.id.radioButton4);
-        ans5 = root.findViewById(R.id.radioButton5);
+        mListView = root.findViewById(R.id.personalTestListView);
+        adapter = new CustomAdapter(requireContext(), new ArrayList<>());
+        mListView.setAdapter(adapter);
 
-//        testsViewModel.getQuestionItemList().observe(getViewLifecycleOwner(), questionItems -> {
-//            updateUI(questionItems);
-//        });
+        testsViewModel = new ViewModelProvider(this).get(TestsViewModel.class);
+
+        testsViewModel.getQuestionItems().observe(getViewLifecycleOwner(), questionItems -> {
+            // When the adapter changes
+            adapter.clear();
+            adapter.addAll(questionItems);
+            adapter.notifyDataSetChanged();
+        });
+
+        endButton = root.findViewById(R.id.end_button);
+        endButton.setOnClickListener(view -> {
+            // Handle button click action if needed
+            Toast.makeText(requireContext(), "End of List Button Clicked", Toast.LENGTH_SHORT).show();
+        });
+
         return root;
     }
-
-
 
     @Override
     public void onDestroyView() {

@@ -1,5 +1,4 @@
 package com.example.shopping_app.ui.tests;
-import com.example.shopping_app.QuestionItem;
 
 import java.util.List;
 
