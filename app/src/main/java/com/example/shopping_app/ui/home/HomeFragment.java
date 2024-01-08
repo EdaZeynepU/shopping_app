@@ -5,12 +5,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SearchView;
 import android.widget.Toast;
-
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -32,10 +30,6 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-//        final TextView textView = binding.textHome;
-//        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-
-        // Kategori düğmelerini ve arama düğmelerini bağla
 
         Button btnWomen = binding.btnWomen;
         Button btnMen = binding.btnMen;
@@ -45,16 +39,14 @@ public class HomeFragment extends Fragment {
         SearchView searchView = binding.searchView;
         Button btnSearch = binding.btnSearch;
 
-        // Resim düğmelerini bağla
         ImageButton btnCampaign = binding.btncampaign;
         ImageButton btnTest = binding.btnTest;
         ImageButton btnDiscount1 = binding.btnDiscount1;
         ImageButton btnDiscount2 = binding.btnDiscount2;
 
-        // Kategori düğmelerine tıklama dinleyicileri ekle (Örnek olarak Toast mesajı gösterilmiştir)
-
 
         btnMen = root.findViewById(R.id.btnMen);
+
         btnMen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,6 +54,7 @@ public class HomeFragment extends Fragment {
                 startActivity(new Intent(getActivity(), CategoryPage.class));
             }
         });
+
 
         btnWomen = root.findViewById(R.id.btnWomen);
         btnWomen.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +65,9 @@ public class HomeFragment extends Fragment {
             }
         });
 
+
         btnUnisex = root.findViewById(R.id.btnUnisex);
+
         btnUnisex.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +77,7 @@ public class HomeFragment extends Fragment {
         });
 
         btnBaby = root.findViewById(R.id.btnBaby);
+
         btnBaby.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,11 +86,10 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        // Arama düğmelerine tıklama dinleyicileri ekle (Örnek olarak Toast mesajı gösterilmiştir)
+
         btnSearch.setOnClickListener(v -> showToast("Search Button Clicked"));
 
 
-        // Resim düğmelerine tıklama dinleyicileri ekle (Örnek olarak Toast mesajı gösterilmiştir)
         btnCampaign.setOnClickListener(v -> showToast("Campaign Image Button Clicked"));
         btnTest.setOnClickListener(v -> showToast("Test Image Button Clicked"));
         btnDiscount1.setOnClickListener(v -> showToast("Discount Image Button 1 Clicked"));
@@ -115,11 +110,9 @@ public class HomeFragment extends Fragment {
 
         return root;
     }
-    // Yardımcı metot: Toast mesajı gösterme
     private void showToast(String message) {
         Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
     }
-    // Yardımcı metot: Arama işlemini gerçekleştirme
     private void performSearch(String query) {
         // Burada alınan metinle yapılacak işlemleri gerçekleştirin
         // Örneğin, bir fragment başlatma, arama sonuçlarını gösterme, vb.
