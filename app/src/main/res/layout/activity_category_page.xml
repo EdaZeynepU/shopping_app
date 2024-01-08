@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gridView"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:rowCount="3"
+    android:layout_gravity="center"
+    android:padding="16dp"
+    android:columnOrderPreserved="false"
+    android:alignmentMode="alignMargins"
+    android:layoutDirection="ltr">
+
+    <!-- İlk Ürün -->
+    <TextView
+        android:id="@+id/Category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_rowSpan="2"
+        android:layout_columnSpan="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageProductPhoto1"
+                android:layout_width="154dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:src="@mipmap/ic_logo_foreground" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textProductName1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/textProductPrice1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Price" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFavorite1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="♥" />
+
+            <Button
+                android:id="@+id/btnEvaluate1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="♦" />
+
+            <Button
+                android:id="@+id/btnDiscountZone1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="♠" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- İkinci Ürün -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_rowSpan="2"
+        android:layout_columnSpan="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageProductPhoto2"
+                android:layout_width="154dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:src="@mipmap/ic_logo_foreground" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textProductName2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/textProductPrice2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Price" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFavorite2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="♥" />
+
+            <Button
+                android:id="@+id/btnEvaluate2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="♦" />
+
+            <Button
+                android:id="@+id/btnDiscountZone2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="♠" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Üçüncü Ürün -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_rowSpan="2"
+        android:layout_columnSpan="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageProductPhoto3"
+                android:layout_width="154dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:src="@mipmap/ic_logo_foreground" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textProductName3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/textProductPrice3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Price" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFavorite3"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="♥" />
+
+            <Button
+                android:id="@+id/btnEvaluate3"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="♦" />
+
+            <Button
+                android:id="@+id/btnDiscountZone3"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="♠" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Dördüncü ürün Ürün -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_rowSpan="2"
+        android:layout_columnSpan="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageProductPhoto4"
+                android:layout_width="154dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:src="@mipmap/ic_logo_foreground" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textProductName4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/textProductPrice4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Price" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFavorite4"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="♥" />
+
+            <Button
+                android:id="@+id/btnEvaluate4"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="♦" />
+
+            <Button
+                android:id="@+id/btnDiscountZone4"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="♠" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Beşinci Ürün -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_rowSpan="2"
+        android:layout_columnSpan="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageProductPhoto5"
+                android:layout_width="154dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:src="@mipmap/ic_logo_foreground" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textProductName5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/textProductPrice5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Price" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFavorite5"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="♥" />
+
+            <Button
+                android:id="@+id/btnEvaluate5"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="♦" />
+
+            <Button
+                android:id="@+id/btnDiscountZone5"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="♠" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Altıncı Ürün -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_rowSpan="2"
+        android:layout_columnSpan="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageProductPhoto6"
+                android:layout_width="154dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:src="@mipmap/ic_logo_foreground" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textProductName6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/textProductPrice6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Price" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFavorite6"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="♥" />
+
+            <Button
+                android:id="@+id/btnEvaluate6"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="♦" />
+
+            <Button
+                android:id="@+id/btnDiscountZone6"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="♠" />
+        </LinearLayout>
+    </LinearLayout>
+</GridLayout>
