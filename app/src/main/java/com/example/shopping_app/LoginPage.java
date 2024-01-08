@@ -2,6 +2,7 @@ package com.example.shopping_app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +19,7 @@ public class LoginPage extends AppCompatActivity {
 
     private EditText editTextEmail, editTextPassword;
     private Button btnLogin;
+    private Button btnSignup;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -31,11 +33,21 @@ public class LoginPage extends AppCompatActivity {
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
         btnLogin = findViewById(R.id.btnLogin);
+        btnSignup = findViewById(R.id.btnSignup);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 loginUser();
+            }
+        });
+
+        btnSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginPage.this, SignupActivity.class);
+                startActivity(intent);
+                 finish();
             }
         });
     }
