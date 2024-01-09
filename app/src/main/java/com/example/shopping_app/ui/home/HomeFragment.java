@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.shopping_app.CategoryPage;
+import com.example.shopping_app.Comment;
 import com.example.shopping_app.R;
 import com.example.shopping_app.databinding.FragmentHomeBinding;
 
@@ -50,9 +51,12 @@ public class HomeFragment extends Fragment {
         btnMen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Men butonuna basıldığında CategoryPage'e geçiş yap
+                CategoryPage.updateCategoryName("Men");
+
+
                 startActivity(new Intent(getActivity(), CategoryPage.class));
             }
+
         });
 
 
@@ -60,7 +64,7 @@ public class HomeFragment extends Fragment {
         btnWomen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Women butonuna basıldığında CategoryPage'e geçiş yap
+                CategoryPage.updateCategoryName("Women");
                 startActivity(new Intent(getActivity(), CategoryPage.class));
             }
         });
@@ -71,7 +75,8 @@ public class HomeFragment extends Fragment {
         btnUnisex.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Unisex butonuna basıldığında CategoryPage'e geçiş yap
+
+                CategoryPage.updateCategoryName("Unisex");
                 startActivity(new Intent(getActivity(), CategoryPage.class));
             }
         });
@@ -81,7 +86,7 @@ public class HomeFragment extends Fragment {
         btnBaby.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Baby butonuna basıldığında CategoryPage'e geçiş yap
+                CategoryPage.updateCategoryName("Baby");
                 startActivity(new Intent(getActivity(), CategoryPage.class));
             }
         });
@@ -99,13 +104,25 @@ public class HomeFragment extends Fragment {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // SearchView'dan metni al
+
+                //Comments Sayfasını kontrol etmek için. SİLİNECEK!!!
+                btnSearch.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startComment();
+                        System.out.println("Comments");
+                    }
+                });
+                //Comments Sayfasını kontrol etmek için. SİLİNECEK!!!
+
+
+ /*               // SearchView'dan metni al
                 String searchText = searchView.getQuery().toString();
 
 
                 // Alınan metni kullanarak arama işlemini başlat
                 performSearch(searchText);
-            }
+*/            }
         });
 
         return root;
@@ -135,6 +152,9 @@ public class HomeFragment extends Fragment {
         startActivity(new Intent(getActivity(), CategoryPage.class));
     }
 
+    private void startComment() {
+        startActivity(new Intent(getActivity(), Comment.class));
+    }
 
 
 
