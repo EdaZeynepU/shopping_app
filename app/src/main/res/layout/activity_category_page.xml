@@ -21,7 +21,7 @@
         android:textSize="25sp"/>
 
     <TextView
-        android:id="@+id/JustLookingGood"
+        android:id="@+id/JustForLookingGood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageProductPhoto1"
                 android:layout_width="154dp"
                 android:layout_height="match_parent"
@@ -102,7 +102,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageProductPhoto2"
                 android:layout_width="154dp"
                 android:layout_height="match_parent"
@@ -169,7 +169,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageProductPhoto3"
                 android:layout_width="154dp"
                 android:layout_height="match_parent"
@@ -236,7 +236,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageProductPhoto4"
                 android:layout_width="154dp"
                 android:layout_height="match_parent"
@@ -302,7 +302,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageProductPhoto5"
                 android:layout_width="154dp"
                 android:layout_height="match_parent"
@@ -368,7 +368,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageProductPhoto6"
                 android:layout_width="154dp"
                 android:layout_height="match_parent"
