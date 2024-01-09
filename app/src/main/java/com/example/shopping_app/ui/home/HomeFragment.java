@@ -30,7 +30,7 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-
+        // Kategori düğmelerini ve arama düğmelerini bağla
         Button btnWomen = binding.btnWomen;
         Button btnMen = binding.btnMen;
         Button btnUnisex = binding.btnUnisex;
@@ -39,10 +39,10 @@ public class HomeFragment extends Fragment {
         SearchView searchView = binding.searchView;
         Button btnSearch = binding.btnSearch;
 
-        ImageButton btnCampaign = binding.btncampaign;
-        ImageButton btnTest = binding.btnTest;
-        ImageButton btnDiscount1 = binding.btnDiscount1;
-        ImageButton btnDiscount2 = binding.btnDiscount2;
+//        ImageButton btnCampaign = binding.btncampaign;
+//        Button btnTest = binding.btnTest;
+//        ImageButton btnDiscount1 = binding.btnDiscount1;
+//        ImageButton btnDiscount2 = binding.btnDiscount2;
 
 
         btnMen = root.findViewById(R.id.btnMen);
@@ -90,10 +90,7 @@ public class HomeFragment extends Fragment {
         btnSearch.setOnClickListener(v -> showToast("Search Button Clicked"));
 
 
-        btnCampaign.setOnClickListener(v -> showToast("Campaign Image Button Clicked"));
-        btnTest.setOnClickListener(v -> showToast("Test Image Button Clicked"));
-        btnDiscount1.setOnClickListener(v -> showToast("Discount Image Button 1 Clicked"));
-        btnDiscount2.setOnClickListener(v -> showToast("Discount Image Button 2 Clicked"));
+//        btnCampaign.setOnCdOnClickListener(v -> showToast("Discount Image Button 2 Clicked"));
 
 
         btnSearch.setOnClickListener(new View.OnClickListener() {
