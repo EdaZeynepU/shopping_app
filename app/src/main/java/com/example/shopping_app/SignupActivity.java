@@ -19,6 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+//Eda Zeynep Uyanık, Ayberk Anayurtdan
 public class SignupActivity extends AppCompatActivity {
 
     private EditText emailEditText, passwordEditText;
@@ -71,7 +72,6 @@ public class SignupActivity extends AppCompatActivity {
     }
 
     private void addUserToFirestore(String userUid, String email) {
-        // Create a new user document in the "users" collection
         Map<String, Object> user = new HashMap<>();
         user.put("email", email);
         user.put("rol","customer");

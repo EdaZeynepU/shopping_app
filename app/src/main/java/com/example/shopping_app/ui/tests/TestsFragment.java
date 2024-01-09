@@ -23,6 +23,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
+//Eda Zeynep Uyanık
 public class TestsFragment extends Fragment {
 
     private FragmentTestsBinding binding;
@@ -52,7 +54,6 @@ public class TestsFragment extends Fragment {
 
         endButton = root.findViewById(R.id.end_button);
         endButton.setOnClickListener(view -> {
-            // Handle button click action if needed
             Toast.makeText(requireContext(), "End of List Button Clicked", Toast.LENGTH_SHORT).show();
         });
 

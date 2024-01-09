@@ -12,6 +12,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.shopping_app.databinding.ActivityMainBinding;
 
+//Eda Zeynep Uyanık, Ayberk Anayurtdan
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
@@ -24,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_tests, R.id.navigation_shopping_cart, R.id.navigation_profile)
                 .build();

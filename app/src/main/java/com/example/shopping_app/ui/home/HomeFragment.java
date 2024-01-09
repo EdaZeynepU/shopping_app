@@ -18,6 +18,7 @@ import com.example.shopping_app.CategoryPage;
 import com.example.shopping_app.R;
 import com.example.shopping_app.databinding.FragmentHomeBinding;
 
+//Ayberk Anayurtdan
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;

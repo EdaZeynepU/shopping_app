@@ -19,6 +19,7 @@ import com.example.shopping_app.R;
 
 import java.util.List;
 
+//Eda Zeynep Uyanık
 public class CustomAdapter extends ArrayAdapter<QuestionItem> {
 
     public CustomAdapter(@NonNull Context context, @NonNull List<QuestionItem> objects) {

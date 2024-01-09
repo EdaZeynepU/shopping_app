@@ -12,6 +12,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
+//Eda Zeynep Uyanık
 public class TestsViewModel extends ViewModel {
 
     private MutableLiveData<List<QuestionItem>> questionItemsLiveData;
@@ -29,7 +30,6 @@ public class TestsViewModel extends ViewModel {
         questionItemsLiveData.setValue(newQuestionItems);
     }
 
-    // Sample method to load some initial data (replace this with your logic)
     private void loadSampleQuestionItems() {
 
             List<QuestionItem> sampleItems = new ArrayList<>();
@@ -47,13 +47,10 @@ public class TestsViewModel extends ViewModel {
                                 QuestionItem question1 = new QuestionItem(document.getString("question"), lst);
                                 sampleItems.add(question1);
                             }
-//                            questionItemsLiveData.setValue(sampleItems);
-//
 
                         } else {
                             Log.w("y", "Error getting documents.", task.getException());
                         }
-//                        sampleItems.clear();
                     });
             questionItemsLiveData.setValue(sampleItems);
 

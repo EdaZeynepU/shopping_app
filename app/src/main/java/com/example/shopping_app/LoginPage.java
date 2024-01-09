@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
+
+//Eda Zeynep Uyanık, Ayberk Anayurtdan
 public class LoginPage extends AppCompatActivity {
 
     private EditText editTextEmail, editTextPassword;
@@ -27,7 +29,6 @@ public class LoginPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
-        // Initialize Firebase Auth
         firebaseAuth = FirebaseAuth.getInstance();
 
         editTextEmail = findViewById(R.id.editTextEmail);

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+//Ayberk Anayurtdan
 public class CategoryPage extends AppCompatActivity {
 
     @Override
