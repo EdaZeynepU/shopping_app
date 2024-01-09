@@ -43,8 +43,6 @@ public class TestsFragment extends Fragment {
         adapter = new CustomAdapter(requireContext(), new ArrayList<>());
         mListView.setAdapter(adapter);
 
-        testsViewModel = new ViewModelProvider(this).get(TestsViewModel.class);
-
         testsViewModel.getQuestionItems().observe(getViewLifecycleOwner(), questionItems -> {
             // When the adapter changes
             adapter.clear();
