@@ -28,6 +28,8 @@ public class ProfileFragment extends Fragment {
 
     private FirebaseAuth firebaseAuth;
 
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 //        ProfileViewModel ProfileViewModel =new ViewModelProvider(this).get(ProfileViewModel.class);
@@ -39,6 +41,15 @@ public class ProfileFragment extends Fragment {
 //        Button btnLogout= view.findViewById(R.id.btnLogout);
         Button btnLogout= view.findViewById(R.id.btnLogout);
         firebaseAuth = FirebaseAuth.getInstance();
+
+        // Yukarıdaki kodu kullanarak bir örnek kullanıcı adını belirtin
+        String userName = "Ayberk";
+
+        // TextView'yi bağlama nesnesi üzerinden bulun
+        TextView textViewResult = binding.textViewName;
+
+        // TextView'nin metnini ayarla
+        textViewResult.setText(String.format("Merhaba %s", userName));
 
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
