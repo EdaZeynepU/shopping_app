@@ -147,7 +147,9 @@ public class HomeFragment extends Fragment {
 
     // Yardımcı metot: CategoryPage'e geçiş yapma
     private void startCategoryPage() {
-        startActivity(new Intent(getActivity(), CategoryPage.class));
+        Intent intent= new Intent(getActivity(), CategoryPage.class);
+
+        startActivity(intent);
     }
 
     private void startComment() {

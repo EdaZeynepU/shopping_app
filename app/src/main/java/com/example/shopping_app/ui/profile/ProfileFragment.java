@@ -36,6 +36,7 @@ public class ProfileFragment extends Fragment {
         View root = binding.getRoot();
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+//        Button btnLogout= view.findViewById(R.id.btnLogout);
         Button btnLogout= view.findViewById(R.id.btnLogout);
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -44,7 +45,6 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 logout();
-                Log.d("logout", "onClick: in");
             }
         });
 
@@ -57,7 +57,6 @@ public class ProfileFragment extends Fragment {
         Intent intent = new Intent(requireContext(), LoginPage.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
-
     }
 
     @Override
